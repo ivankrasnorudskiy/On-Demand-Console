@@ -1,0 +1,33 @@
+﻿@using ITSS.Repository.ConsoleMVC.Models.ForSearch;
+@model SearchParam
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>Ivan APP</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="search-container">
+            <input class="search-input" asp-for="Query" placeholder="Введите запрос">
+            <button id="createSearchButton" class="button button--create-search">Create Search</button>
+        </div>
+        <p class="search-input__error-message visually-hidden">Поле ввода не может быть пустым</p>
+        <div class="searches-list-container">
+            <table class="searches-list"></table>
+            <button class=" button button--get-result">Get Search Results</button>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="~/js/main.js"></script>
+</body>
+</html>
+

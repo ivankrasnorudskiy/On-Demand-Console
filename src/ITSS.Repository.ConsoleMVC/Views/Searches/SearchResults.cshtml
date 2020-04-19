@@ -1,0 +1,47 @@
+﻿@using ITSS.Repository.ConsoleMVC.Models.ForSearch;
+@model SearchResult
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <title>Responses</title>
+</head>
+<body>
+    <div class="panel-body">
+        <h2>Here is the list of found events</h2>
+        @if (Model.Records.Count > 0)
+        {
+            <table class="table table-sm table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Message</th>
+                        <th>Properties</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Record r in Model.Records)
+                    {
+                        <tr>
+                            <td>@r.Message</td>
+                            <td>@r.Properties</td>
+                            <td>@r.Timestamp</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+        <p> No one events have been found</p>
+        }
+    </div>
+</body>
+</html>

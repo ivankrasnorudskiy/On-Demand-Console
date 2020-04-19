@@ -1,0 +1,236 @@
+﻿[
+  {
+    "timestamp": "01.05.2019T14:24:23Z",
+    "message": "Something strange happened",
+    "properties": {
+      "Who": "Bobby",
+      "Where": "Australia",
+      "City": "St.Petersburg"
+
+    }
+  },
+  {
+    "timestamp": "01.05.2019T17:17:08Z",
+    "message": "Man meet a girl",
+    "properties": {
+      "Who": "Ivan",
+      "Where": "Russia",
+      "City": "St.Petersburg"
+
+    }
+  },
+  {
+    "timestamp": "03.05.2019T01:05:00Z",
+    "message": "Created a test data file",
+    "properties": {
+      "Who": "Denis",
+      "Where": "Russia",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T07:33:51.0000000Z",
+    "message": "Search is finished",
+    "properties": {
+      "Who": "Microsoft Invitation Acceptance Portal",
+      "Where": "ITSSCADEV",
+      "Whom": "Konstantin.Ryabkov_dell.com@survivetest.onmicrosoft.com",
+      "What": "User updated",
+      "City" : "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:11:02.0000000Z",
+    "message": "Added member 'Archi Tect' to group 'SomeTestOGroup' in the directory",
+    "properties": {
+      "Who": "Synchronizer",
+      "Where": "ITSSCADEV",
+      "Whom": "archi@survivetest.onmicrosoft.com",
+      "What": "Group member added",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:12:20.0000000Z",
+    "message": "Set Company Information: itsearchadtest (itsearchadtest)",
+    "properties": {
+      "Who": "Synchronizer",
+      "Where": "ITSSCADEV",
+      "Whom": "itsearchadtest",
+      "What": "Azure Active Directory - Directory event",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:12:23.0000000Z",
+    "message": "Update company: IT Security Search Test AD (IT Security Search Test AD)",
+    "properties": {
+      "Who": "Microsoft Online Services",
+      "Where": "ITSSCADEV",
+      "Whom": "IT Security Search Test AD",
+      "What": "Azure Active Directory - Directory event",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:14:43.0000000Z",
+    "message": "User Irina.Ivanova_dell.com#EXT#@survivetest.onmicrosoft.com (Irina.Ivanova) was added to the directory",
+    "properties": {
+      "Who": "Synchronizer",
+      "Whom": "Irina.Ivanova_dell.com#EXT#@survivetest.onmicrosoft.com",
+      "Where": "ITSSCADEV",
+      "What": "User added",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:14:43.0000000Z",
+    "message": "Invite external user: UPN: Irina.Ivaniva@mail.ru, Email:Irina.Ivaniva@mail.ru, InvitationId: 2dbfb7a9-f954-42cb-ac28-66b421d6f492 (UPN: Irina.Ivanova@dell.com, Email:Irina.Ivanova@dell.com, InvitationId: 2dbfb7a9-f954-42cb-ac28-66b421d6f492)",
+    "properties": {
+      "Who": "Synchronizer",
+      "WhoId": "Synchronizer@survivetest.onmicrosoft.com",
+      "Whom": "UPN: Irina.Ivanova@dell.com, Email:Irina.Ivaniva@mail.ru, InvitationId: 2dbfb7a9-f954-42cb-ac28-66b421d6f492",
+      "Where": "ITSSCADEV",
+      "What": "Azure Active Directory - User event",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:56:50.0000000Z",
+    "message": "Group 'ITSecuritySearch Test Team' created in the directory",
+    "properties": {
+      "Who": "On-Premises Directory Synchronization Service Account",
+      "Whom": "ITSecuritySearch Test Team",
+      "Where": "ITSSCADEV",
+      "What": "Group added",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:56:51.0000000Z",
+    "message": "Group 'ITSecuritySearch Dev Team' in the directory updated",
+    "properties": {
+      "Who": "On-Premises Directory Synchronization Service Account",
+      "Whom": "ITSecuritySearch Dev Team",
+      "Where": "ITSSCADEV",
+      "What": "Group updated",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:56:51.0000000Z",
+    "message": "Group 'ITSecuritySearch Dev Team' in the directory updated",
+    "properties": {
+      "Who": "On-Premises Directory Synchronization Service Account",
+      "Whom": "ITSecuritySearch Dev Team",
+      "Where": "ITSSCADEV",
+      "What": "Group updated",
+      "City": "Toronto"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:56:51.0000000Z",
+    "message": "Group 'ITSecuritySearch Dev Team' in the directory updated",
+    "properties": {
+      "Who": "On-Premises Directory Synchronization Service Account",
+      "Whom": "ITSecuritySearch Dev Team",
+      "Where": "ITSSCADEV",
+      "What": "Group updated",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-22T18:56:51.0000000Z",
+    "message": "Group 'ITSecuritySearch Test Team' in the directory updated",
+    "properties": {
+      "Who": "On-Premises Directory Synchronization Service Account",
+      "Whom": "ITSecuritySearch Test Team",
+      "Where": "ITSSCADEV",
+      "What": "Group updated",
+      "City": "Toronto"
+    }
+  },
+  {
+    "timestamp": "2018-11-26T15:04:55.0000000Z",
+    "message": "Added owner 'ThisAadInternalApp' to group 'SomeTestOSubGroup' in the directory",
+    "properties": {
+      "Who": "ThisAadInternalApp",
+      "Whom": "ThisAadInternalApp",
+      "Where": "ITSSCADEV",
+      "What": "Owner added to group",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-26T15:16:59.0000000Z",
+    "message": "Added member 'Denis Istomin' to group 'Okeears Stakeholders' in the directory",
+    "properties": {
+      "Who": "ThisAadInternalApp",
+      "Whom": "distomin@survivetest.onmicrosoft.com",
+      "Where": "ITSSCADEV",
+      "What": "Member added to group",
+      "City": "Toronto"
+    }
+  },
+  {
+    "timestamp": "2018-11-26T15:17:21.0000000Z",
+    "message": "Added member 'Irina.Ivanova' to group 'Okeears Stakeholders' in the directory",
+    "properties": {
+      "Who": "ThisAadInternalApp",
+      "Whom": "Irina.Ivanova_dell.com#EXT#@survivetest.onmicrosoft.com",
+      "Where": "ITSSCADEV",
+      "What": "Member added to group",
+      "City": "St.Petersburg"
+    }
+  },
+  {
+    "timestamp": "2018-11-26T15:19:43.0000000Z",
+    "message": "Change password (self-service) - CloudPasswordPolicyError: robert@survivetest.onmicrosoft.com (Robert)",
+    "properties": {
+      "Who": "robert@survivetest.onmicrosoft.com",
+      "Whom": "robert@survivetest.onmicrosoft.com",
+      "Where": "ITSSCADEV",
+      "What": "Azure Active Directory - User event",
+      "City": "Toronto"
+    }
+  },
+  {
+    "timestamp": "2018-11-26T15:19:43.0000000Z",
+    "message": "User robert@survivetest.onmicrosoft.com (Robert) in the directory had their password changed",
+    "properties": {
+      "Who": "Robert",
+      "WhoId": "robert@survivetest.onmicrosoft.com",
+      "Whom": "robert@survivetest.onmicrosoft.com",
+      "Where": "ITSSCADEV",
+      "Workstation": "",
+      "What": "User password changed",
+      "City": "London"
+    }
+  },
+  {
+    "timestamp": "2018-11-26T15:20:10.0000000Z",
+    "message": "Update StsRefreshTokenValidFrom Timestamp: robert@survivetest.onmicrosoft.com (Robert)",
+    "properties": {
+      "Who": "Robert",
+      "WhoId": "robert@survivetest.onmicrosoft.com",
+      "Whom": "robert@survivetest.onmicrosoft.com",
+      "Where": "ITSSCADEV",
+      "Workstation": "",
+      "What": "Azure Active Directory - User event",
+      "City": "London"
+    }
+  },
+  {
+    "timestamp": "2018-11-26T15:21:51.0000000Z",
+    "message": "Added member 'Robert' to group 'SomeTestOGroup' in the directory",
+    "properties": {
+      "Who": "Robert",
+      "WhoId": "robert@survivetest.onmicrosoft.com",
+      "Whom": "SomeTestOGroup",
+      "Where": "ITSSCADEV",
+      "Workstation": "",
+      "What": "Group member added",
+      "City": "London"
+    }
+  }
+]
