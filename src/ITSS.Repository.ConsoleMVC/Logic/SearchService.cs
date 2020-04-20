@@ -55,7 +55,7 @@ namespace ITSS.Repository.ConsoleMVC.Logic
                 return search;
             }
 
-            throw new Exception("Search has not been created");
+            throw new ArgumentException($"Search with same id {search.Id} and search params is already exists");
         }
 
         private async void StartSearch (Search search)
