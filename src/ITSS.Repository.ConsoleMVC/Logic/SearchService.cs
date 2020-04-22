@@ -30,21 +30,6 @@ namespace ITSS.Repository.ConsoleMVC.Logic
             _log = log ?? throw new ArgumentNullException(nameof(log));
         }
 
-        public async Task<List<Search>> GetAllSearchesAsync()
-        {
-           return await Task.Run(() => _searches.Values.ToList());
-        }
-
-        public async Task<SearchResult> GetSearchResultAsync(string searchId)
-        {
-            return await GetSearchResult(searchId);
-        }
-
-        public async Task DeleteSearchAsync(string searchId)
-        {
-            await DeleteSearch(searchId);
-        }
-
         public async Task<Search> CreateSearchAsync(SearchParam param)
         {
             var id = Guid.NewGuid().ToString();
@@ -60,6 +45,29 @@ namespace ITSS.Repository.ConsoleMVC.Logic
 
             _log.LogError($"Search with same id {search.Id} and search params is already exists");
             throw new ArgumentException($"Search with same id {search.Id} and search params is already exists");
+        }
+
+        public List<Search> GetAllSearches()
+        {
+            return _searches.Values.ToList();
+        }
+
+        public SearchResult GetSearchResult(string searchId)
+        {
+            _log.LogDebug($"Try get search({searchId}) result ");
+            if (_searchResultsDict.TryGetValue(searchId, out var searchResult))
+                return searchResult;
+
+            throw new Exception("TODO: Results is not found exception");
+        }
+
+        public void DeleteSearch(string searchId)
+        {
+            _log.LogDebug($"Try remove search with id {searchId}");
+            if (!_searches.TryRemove(searchId, out _))
+                throw new Exception("TODO: Search is not found exception");
+
+            _searchResultsDict.TryRemove(searchId, out _);
         }
 
         private async void StartSearch (Search search)
@@ -89,33 +97,6 @@ namespace ITSS.Repository.ConsoleMVC.Logic
                 NextResultUri = "",
                 Records = foundRecords
             };
-        }
-
-        private Task<SearchResult> GetSearchResult(string searchId)
-        {
-            _log.LogDebug($"Try get search({searchId}) result ");
-            if (_searchResultsDict.TryGetValue(searchId, out var searchResult))
-                return Task.FromResult(searchResult);
-
-            throw new Exception("TODO: Results is not found exception");
-        }
-
-        private async Task DeleteSearch(string searchId)
-        {
-            _log.LogDebug($"Try remove search with id {searchId}");
-            if (!_searches.TryRemove(searchId, out _))
-                throw new Exception("TODO: Search is not found exception");
-
-            await DeleteSearchResults(searchId);
-        }
-
-        private Task DeleteSearchResults(string searchId)
-        {
-            _log.LogDebug($"Try remove search({searchId}) results");
-            if (_searchResultsDict.TryRemove(searchId, out _))
-                return Task.CompletedTask;
-
-            throw new Exception("TODO: Search results are not found exception");
         }
     }
 }

@@ -20,19 +20,19 @@ namespace ITSS.Repository.ConsoleMVC.Logic.Interfaces
         /// <summary>
         /// Returns all searches collection.
         /// </summary>
-        Task<List<Search>> GetAllSearchesAsync();
+        List<Search> GetAllSearches();
 
         /// <summary>
         /// Returns search result by id.
         /// </summary>
         /// <param name="searchId">Id of the target search.</param>
-        Task<SearchResult> GetSearchResultAsync(string searchId);
+        SearchResult GetSearchResult(string searchId);
 
         /// <summary>
         /// Deletes search instance by id.
         /// </summary>
         /// <param name="searchId">Id of the target search.</param>
-        Task DeleteSearchAsync(string searchId);
+        void DeleteSearch(string searchId);
 
 
     }

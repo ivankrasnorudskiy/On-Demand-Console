@@ -88,6 +88,8 @@ const updateSearchesList = () => {
         if (searches.length > 0) {
             fillSearchesList(searches);
             setUpdate(searches);
+        } else {
+            searchesList.empty();
         }
     });
 };

@@ -36,27 +36,27 @@ namespace ITSS.Repository.ConsoleMVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllSearches()
+        public IActionResult GetAllSearches()
         {
             _log.LogDebug("Returning the list of all searches");
-            var searches = await _searchService.GetAllSearchesAsync();
+            var searches =  _searchService.GetAllSearches();
 
             return Ok(searches ?? new List<Search>());
         }
 
         [HttpGet("{searchId}/results")]
-        public async Task<ViewResult> GetSearchResults([FromRoute]string searchId)
+        public ViewResult GetSearchResults([FromRoute]string searchId)
         {
             _log.LogDebug($"Returning search result by id {searchId}");
-            var searchResults = await _searchService.GetSearchResultAsync(searchId);
+            var searchResults = _searchService.GetSearchResult(searchId);
             return (searchResults == null) ? View("SearchResults") : View("SearchResults", searchResults);
         }
 
         [HttpDelete("{searchId}")]
-        public async Task<IActionResult> DeleteSearchById([FromRoute]string searchId)
+        public IActionResult DeleteSearchById([FromRoute]string searchId)
         {
             _log.LogDebug($"Deleting search by id {searchId}");
-            await _searchService.DeleteSearchAsync(searchId);
+            _searchService.DeleteSearch(searchId);
             return Ok();
         }
     }
