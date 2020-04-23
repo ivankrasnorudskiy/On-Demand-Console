@@ -58,14 +58,14 @@ namespace ITSS.Repository.ConsoleMVC.Logic
             if (_searchResultsDict.TryGetValue(searchId, out var searchResult))
                 return searchResult;
 
-            throw new Exception("TODO: Results is not found exception");
+            throw new ArgumentNullException($"Search with id {searchId} is not found in repository");
         }
 
         public void DeleteSearch(string searchId)
         {
             _log.LogDebug($"Try remove search with id {searchId}");
             if (!_searches.TryRemove(searchId, out _))
-                throw new Exception("TODO: Search is not found exception");
+                throw new ArgumentNullException($"Search with id {searchId} is not found in repository");
 
             _searchResultsDict.TryRemove(searchId, out _);
         }

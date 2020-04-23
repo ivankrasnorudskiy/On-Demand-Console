@@ -1,4 +1,5 @@
 ﻿using ITSS.Repository.ConsoleMVC.Logic.Interfaces;
+using ITSS.Repository.ConsoleMVC.Models;
 using ITSS.Repository.ConsoleMVC.Models.ForSearch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -47,17 +48,31 @@ namespace ITSS.Repository.ConsoleMVC.Controllers
         [HttpGet("{searchId}/results")]
         public ViewResult GetSearchResults([FromRoute]string searchId)
         {
-            _log.LogDebug($"Returning search result by id {searchId}");
-            var searchResults = _searchService.GetSearchResult(searchId);
-            return (searchResults == null) ? View("SearchResults") : View("SearchResults", searchResults);
+            try
+            {
+                _log.LogDebug($"Returning search result by id {searchId}");
+                var searchResults = _searchService.GetSearchResult(searchId);
+                return (searchResults == null) ? View("SearchResults") : View("SearchResults", searchResults);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return View("Error", new ErrorViewModel(ex.Message));
+            }
         }
 
         [HttpDelete("{searchId}")]
         public IActionResult DeleteSearchById([FromRoute]string searchId)
         {
-            _log.LogDebug($"Deleting search by id {searchId}");
-            _searchService.DeleteSearch(searchId);
-            return Ok();
+            try
+            {
+                _log.LogDebug($"Deleting search by id {searchId}");
+                _searchService.DeleteSearch(searchId);
+                return Ok();
+            }
+            catch (ArgumentNullException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }
